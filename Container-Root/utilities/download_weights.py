@@ -24,5 +24,5 @@ def download(url, file_name):
 
 # download weights for the keras_retinanet model            
 url = "https://github.com/fizyr/keras-retinanet/releases/download/0.5.1/resnet50_coco_best_v2.1.0.h5"
-model_path = os.path.join('/snapshots', 'resnet50_coco_best_v2.1.0.h5')
+model_path = os.path.join('..', 'snapshots', 'resnet50_coco_best_v2.1.0.h5')
 download(url, model_path)
