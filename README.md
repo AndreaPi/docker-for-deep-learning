@@ -39,8 +39,8 @@ The scripts rely on shell variables defined in the `.env` file.
  3. After fixing the first error, try building again. Depending on whether you're behind a firewall or not, you may need to edit the same file again.
  4. Now launch the container with `run.sh`, open a browser and go to http://localhost:5555. You should see the Jupyter server dashboard.
  5. Navigate to `workdir/notebooks`, execute the [Keras ResNet-50 example](https://github.com/AndreaPi/docker-training-2019-public/blob/master/notebooks/keras_resnet50_example.ipynb) and the [Keras RetinaNet example](https://github.com/AndreaPi/docker-training-2019-public/blob/master/notebooks/keras_resnet50_example.ipynb)
- 6. Go back to the terminal, check the status of the container with `status.sh` and check that it's still running. Close the Jupyter notebook (log out and halt).
- 7. What happened to the list of container (hint: check the docs for `docker ps`)? What should you change to make sure that the container’s file system is cleaned on exit? Instead than modifying a file, you can obtain the same effect running `stop.sh`.
+ 6. Go back to the terminal, check the status of the container with `status.sh` and check that it's still running. Close the Jupyter server by clicking the <kbd>Quit</kbd> button.
+ 7. What happened to the container’s file system? Can you restart the container with `run.sh`, or do you get an error? Try to modify a certain file, so that the next time you stop the container, its filesystem will be deleted, and you will be able to restart the container immediately. You can obtain the same effect (cleaning the container’s file system on exit) by using `stop.sh` to stop the container.
 
  That's it! You're now a Docker Pro! Well....maybe a Docker Duckling 😉 Note how easy it was to make inference with the ResNet-50 model on your pc! Usually, each time you want to run the same model on a different machine, we would have to:
 
