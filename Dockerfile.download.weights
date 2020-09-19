@@ -30,8 +30,8 @@ RUN cd keras-retinanet && \
 RUN pip3 install --user git+https://github.com/cocodataset/cocoapi.git#subdirectory=PythonAPI
 
 # Install ResNet50 and keras_resnet weights
-COPY Container-Root/utilities/download_weights.py /
-RUN python download_weights.py && rm download_weights.py
+COPY download_weights.py /
+RUN python /download_weights.py && rm /download_weights.py
 
 WORKDIR /
 
